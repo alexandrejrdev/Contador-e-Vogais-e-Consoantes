@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Contador de Palavras</title>
+</head>
+
+<body>
+    <main class="h-screen w-full flex flex-col items-center bg-slate-400">
+        <header class="w-full flex flex-col justify-center items-center gap-6">
+            <h1 class="font-extrabold text-4xl mt-5">Analisador de Texto</h1>
+            <h2 class="font-semibold text-xl text-center">Digite seu texto e veja quantas palavras, <br> vogais e
+                consoantes existem.</h2>
+            <p class="text-lg">Digite o seu texto a baixo <i class="fa-solid fa-arrow-down-a-z text-xl"></i> </p>
+        </header>
+        <section class="w-full flex items-center justify-center mt-5">
+            <!-- <input class="w-full bg-slate-200 px-4 py-4 outline-none" type="text" name="" id="" placeholder="Digite seu texto aqui..."> -->
+            <textarea id="meuTexto" class="w-2/4 h-56 outline-none bg-slate-200 px-4 py-4" name="" placeholder="Digite seu texto aqui..."></textarea>
+            <button onclick="limparText()" class="bg-green-700 text-white h-56 ml-2 px-4 font-bold rounded-xl" >Limpar <br> Texto</button>
+        </section>
+        <button onclick="resultado()" class="bg-slate-600 hover:bg-slate-800 hover:transition-all hover:translate-y-1 text-white rounded-2xl p-3 mt-5 ">CLICK AQUI PARA MOSTRAR O RESULTADO</button>
+        <section class="flex justify-between mt-5 w-2/4">
+
+            <div class="h-[100px] w-[150px] bg-slate-200 flex flex-col items-center rounded-2xl justify-between">
+                <p class="mt-2 font-semibold">LETRAS</p>
+                <div class="w-full h-2/3 flex items-center justify-center">
+                    <p id="qtdPalavras" class="font-bold text-3xl text-green-700">0</p>
+                </div>
+            </div>
+            <div class="h-[100px] w-[150px] bg-slate-200 flex flex-col items-center rounded-2xl justify-between">
+                <p class="mt-2 font-semibold">VOGAIS</p>
+                <div class="w-full h-2/3 flex items-center justify-center">
+                    <p id="qtdVogais" class="font-bold text-3xl text-blue-600">0</p>
+                </div>
+            </div>
+            <div class="h-[100px] w-[150px] bg-slate-200 flex flex-col items-center rounded-2xl justify-between">
+                <p class="mt-2 font-semibold">CONSOANTES</p>
+                <div class="w-full h-2/3 flex items-center justify-center">
+                    <p id="qtdConsoantes" class="font-bold text-3xl text-yellow-600">0</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
